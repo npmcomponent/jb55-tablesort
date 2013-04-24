@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Numbers</th>
+              <th>Letters</th>
+              <th>Dates</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>z</td>
+              <td>Wed Apr 24 2013 17:27:08 GMT-0400 (EDT)</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>d</td>
+              <td>Tue Jan 23 2013 17:27:08 GMT-0400 (EDT)</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>b</td>
+              <td>Fri Dec 12 2014 17:25:08 GMT-0400 (EDT)</td>
+            </tr>
+          </tbody>
+        </table>
+    <script src="build/build.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var tablesort = require('tablesort');
+      var el = document.querySelector('table');
+      var sorter = tablesort(el);
+      sorter.on('sort', function(order, header){
+        header.style.backgroundColor = order === 'asc'? 'red':'blue';
+      });
+    </script>
+    </body>
+</html>
+
