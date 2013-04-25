@@ -8,7 +8,7 @@ var natural = require('natural-sort');
 var Emitter = require('emitter');
 var inherit = require('inherit');
 
-module.exports = TableSorter; 
+module.exports = TableSorter;
 
 /**
  * TableSorter
@@ -54,7 +54,7 @@ TableSorter.prototype.headers = function(table){
 };
 
 /**
- * Get parent element for sorting 
+ * Get parent element for sorting
  *
  * @param {Element} optional table element
  * @api public
@@ -64,6 +64,16 @@ TableSorter.prototype.el = function(table) {
   table = table || this.table;
   this._el = this.options.el || query('tbody', table);
   return this._el;
+};
+
+/**
+ * Get elements for sorting
+ *
+ * @param {Element} optional table element
+ * @api public
+ */
+TableSorter.prototype.elements = function() {
+  return this.options.elements || this.el().children;
 };
 
 /**
@@ -107,8 +117,9 @@ TableSorter.prototype.handlers = function(headers, options){
  */
 TableSorter.prototype.sort = function(fn, order, h, i) {
   var el = this.el();
+  var els = this.elements();
   this.order = order = order || this.order === 'asc'? 'desc' : 'asc';
-  sort[order](el, fn);
+  sort[order](el, els, fn);
   this.emit('sort', order, h, i, fn);
 };
 
