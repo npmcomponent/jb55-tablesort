@@ -7,6 +7,7 @@ var map = require('map');
 var natural = require('natural-sort');
 var Emitter = require('emitter');
 var inherit = require('inherit');
+var ap = require('ap');
 
 module.exports = TableSorter;
 
@@ -73,7 +74,7 @@ TableSorter.prototype.el = function(table) {
  * @api public
  */
 TableSorter.prototype.elements = function() {
-  return this.options.elements || this.el().children;
+  return ap(this.options.elements) || this.el().children;
 };
 
 /**
