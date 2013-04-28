@@ -1,4 +1,3 @@
-
 # tablesort
 
   Minimalistic table sorter
@@ -11,7 +10,17 @@
 
 ```javascript
 var tablesort = require('tablesort')
-var el = document.querySelector('table')
+var table = document.querySelector('table')
+var sorter = tablesort(table);
+
+sorter.on('sort', function(order, header, index){
+  header.style.backgroundColor = order === 'asc'? 'red' : 'blue';
+});
+```
+
+### Custom sort
+
+```javascript
 var sorter = tablesort(el, {
   sort: function(header, index){
     var title = header.textContent;
@@ -19,10 +28,6 @@ var sorter = tablesort(el, {
       return complicatedSort;
     return tablesort.defaultSort;
   }
-});
-
-sorter.on('sort', function(order, header, index){
-  header.style.backgroundColor = order === 'asc'? 'red' : 'blue';
 });
 ```
 
