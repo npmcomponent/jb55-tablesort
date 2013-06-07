@@ -85,7 +85,7 @@ TableSorter.prototype.elements = function() {
  * @api public
  */
 TableSorter.prototype.attach = function(table){
-  this.handlers(this.headers());
+  this.handlers(this.headers(table));
 };
 
 
