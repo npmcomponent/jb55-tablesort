@@ -2,7 +2,7 @@
   "name": "tablesort",
   "repo": "jb55/tablesort",
   "description": "Sort tables",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [],
   "dependencies": {
     "jb55/sort": "*",

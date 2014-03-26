@@ -101,7 +101,7 @@ TableSorter.prototype.handlers = function(headers, options){
   each(headers, function(h, i){
     events.bind(h, 'click', function(e){
       var srt = self.options.sort(h, i);
-      self.sort(srt, this.order, h, i);
+      if (srt) self.sort(srt, this.order, h, i);
     });
   });
 };
