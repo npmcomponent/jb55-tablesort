@@ -1,13 +1,13 @@
 
-var sort = require('sort');
-var query = require('query');
-var events = require('event');
-var each = require('each');
-var map = require('map');
-var natural = require('natural-sort');
-var Emitter = require('emitter');
-var inherit = require('inherit');
-var ap = require('ap');
+var sort = require('jb55-sort');
+var query = require('component-query');
+var events = require('component-event');
+var each = require('component-each');
+var map = require('component-map');
+var natural = require('javve-natural-sort');
+var Emitter = require('component-emitter');
+var inherit = require('component-inherit');
+var ap = require('jb55-ap');
 
 module.exports = TableSorter;
 

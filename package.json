@@ -1,0 +1,18 @@
+{
+  "name": "jb55-tablesort",
+  "description": "Sort tables",
+  "version": "0.1.1",
+  "keywords": [],
+  "dependencies": {
+    "jb55-sort": "git://github.com/npmcomponent/jb55-sort.git",
+    "jb55-ap": "git://github.com/npmcomponent/jb55-ap.git",
+    "component-each": "git://github.com/npmcomponent/component-each.git",
+    "component-map": "git://github.com/npmcomponent/component-map.git",
+    "component-event": "git://github.com/npmcomponent/component-event.git",
+    "component-emitter": "git://github.com/npmcomponent/component-emitter.git",
+    "component-inherit": "git://github.com/npmcomponent/component-inherit.git",
+    "component-query": "git://github.com/npmcomponent/component-query.git",
+    "javve-natural-sort": "git://github.com/npmcomponent/javve-natural-sort.git"
+  },
+  "license": "MIT"
+}
